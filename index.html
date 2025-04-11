@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responivo.css">
     <title>Formulário com Validação</title>
 </head>
 <body>
@@ -17,15 +18,20 @@
             </p> 
         </section>
         <section class="formulario">
-            <form action="">
-                <input type="text" id="name" placeholder="Nome completo *">
-                <input type="email" id="email" placeholder="Email *">
-                <input type="number" id="telefone" placeholder="Telefone *">
-                <textarea id="areaTexto" placeholder="Mensagem *"></textarea>
+            <form id="form">
+                <input class="estado-inicial" type="text"  placeholder="Nome completo *">
+                <span class="spanNone">campo obrigatório</span>
+                <input class="estado-inicial" type="email"  placeholder="Email *">
+                <span class="spanNone">campo obrigatório</span>
+                <input class="estado-inicial" type="number" placeholder="Telefone *">
+                <span class="spanNone">campo obrigatório</span>
+                <textarea class="estado-inicial" id="areaTexto" placeholder="Mensagem *"></textarea>
+                <span class="spanNone">campo obrigatório</span>
                 <p>*campos obrigatórios</p>
-                <input class="enviar" type="submit" value="Enviar">
+                <input class="enviar" id="enviar" type="submit" value="Enviar">
             </form>
         </section>
     </main>
+    <script src="src/js/index.js"></script>
 </body>
 </html>

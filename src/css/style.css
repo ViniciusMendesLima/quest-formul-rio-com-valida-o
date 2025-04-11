@@ -41,38 +41,74 @@ main{
     background-color: white;
     padding: 20px 0;
     margin-right: 50px;
+    line-height: 0;
 }
 
 .formulario input{
     height: 35px;
-    margin-bottom: 15px;
+    margin-top: 15px;
     padding-left: 10px;
+}
+
+.formulario input:nth-child(1){
+    margin-top: 0;
 }
 
  textarea{
     height: 100px;
     padding: 10px 8px;
-    margin-bottom: 7px;
+    margin-top: 15px;
+    
     resize: none;
 }
 .formulario input, .formulario textarea{
     width: 298px;
     border-radius: 5px;
-    border: 1px solid #000000;
     margin-left: 20px;
+    margin-bottom: 1px;
 }
 
 .formulario input::placeholder, .formulario textarea::placeholder{
     font-weight: 700;
+    
 }
 
 .formulario p{
     margin-left: 14px;
-    margin-bottom: 20px;
+    margin-top: 16px;
+    margin-bottom: 11px;
 }
 
 .formulario .enviar{
     border: none;
     color: white;
     background-color: #3CCC87;
+    cursor: pointer;
 }
+
+.formulario span{
+    font-size: 8px;
+    color: #F52E2E;
+    margin-left: 21px;
+}
+
+.formulario .spaninline{
+    display: inline;
+}
+
+.spanNone{
+    display: none;
+}
+
+.estado-inicial{
+    border: 1px solid #000000;
+}
+
+.preenchido-sim{
+    border: 1px solid #00C22B;
+}
+
+.preenchido-não{
+    border: 1px solid #F52E2E;
+}
+
