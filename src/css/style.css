@@ -44,7 +44,7 @@ main{
     line-height: 0;
 }
 
-.formulario input{
+.formulario input, .formulario .enviar{
     height: 35px;
     margin-top: 15px;
     padding-left: 10px;
@@ -61,7 +61,7 @@ main{
     
     resize: none;
 }
-.formulario input, .formulario textarea{
+.formulario input, .formulario textarea,.formulario .enviar{
     width: 298px;
     border-radius: 5px;
     margin-left: 20px;
@@ -92,12 +92,12 @@ main{
     margin-left: 21px;
 }
 
-.formulario .spaninline{
-    display: inline;
+.formulario .spanNone{
+    display: none;
 }
 
-.spanNone{
-    display: none;
+.formulario .spaninline{
+    display: inline;
 }
 
 .estado-inicial{
@@ -108,7 +108,7 @@ main{
     border: 1px solid #00C22B;
 }
 
-.preenchido-não{
+.preenchido-nao{
     border: 1px solid #F52E2E;
 }
 
