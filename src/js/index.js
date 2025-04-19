@@ -38,6 +38,8 @@
 const estadoDePreenchimento = document.querySelectorAll(".estado-inicial");
 const botaoEnviar = document.querySelector(".enviar");
 
+const emailInput = document.querySelector("#emailId")
+
 botaoEnviar.addEventListener("click", (e) =>{
     e.preventDefault()
 
@@ -46,11 +48,34 @@ botaoEnviar.addEventListener("click", (e) =>{
             input.classList.add("preenchido-sim");
             input.classList.remove("preenchido-nao");
             input.nextElementSibling.classList.remove("spaninline")
+
+            const email = emailInput.value;
+
+            const eValido = validarEmail(email)
+
+            if (!eValido) {
+                campoInvalido(input);
+                
+                input.nextElementSibling.textContent = "E-mail inválido"
+            }
             
         } else {
-            input.classList.remove("preenchido-sim");
-            input.classList.add("preenchido-nao");
-            input.nextElementSibling.classList.add("spaninline")
+            campoInvalido(input);
         }
-    })
-})
+    });
+
+    
+});
+
+
+const validarEmail = (email) => {
+    const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+    return regex.test(email)
+}
+function campoInvalido(input) {
+    input.classList.remove("preenchido-sim");
+    input.classList.add("preenchido-nao");
+    input.nextElementSibling.textContent = "campo obrigatório"
+    input.nextElementSibling.classList.add("spaninline");
+}
+
