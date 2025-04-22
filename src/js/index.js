@@ -149,6 +149,7 @@ function validarTelefone(telefone){
 
     }
 
+
 function campoValido(input) {
     input.classList.add("preenchido-sim");
     input.classList.remove("preenchido-nao");
